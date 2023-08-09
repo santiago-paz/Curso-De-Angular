@@ -1,0 +1,17 @@
+:host {
+    padding: 1rem;
+    border: 1px solid black;
+    display: block;
+}
+:host::before {
+    content: 'AppComponent'
+}
+
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+}
+.container-flex app-card {
+    margin: 1rem;
+}

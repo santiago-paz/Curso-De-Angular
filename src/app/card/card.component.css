@@ -1,0 +1,23 @@
+.card-container {
+    width: 315px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.card-container img {
+    width: 100%;
+}
+
+.card-container .title {
+    font-size: 20px;
+    margin-bottom: .5rem;
+}
+
+.card-container .secondary-text,
+.card-container .supporting-text  {
+    font-size: 14px;
+}
+
+.card-container .info-container {
+    padding: 10px;
+}
