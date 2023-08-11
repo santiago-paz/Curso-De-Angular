@@ -25,3 +25,10 @@ fieldset input {
     display: block;
     margin-bottom: 1rem;
 }
+
+.loading-placeholder {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

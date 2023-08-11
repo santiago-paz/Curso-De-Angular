@@ -1,45 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Card } from './interfaces/card';
+import { CardsService } from './cards.service';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private cardsService: CardsService) {}
+
   nombre = 'Santiago';
+  loadingCards: boolean = true;
   newCard: Card = {
     title: '',
     secondaryTitle: '',
     resourceUrl: '',
     supportingText: '',
   };
-  cards: Array<Card> = [
-    {
-      title: 'Titulo 1',
-      secondaryTitle: 'Titulo Secundario 1',
-      resourceUrl: '/assets/card_img_placeholder.svg',
-      supportingText: 'Texto de Soporte 1',
-    },
-    {
-      title: 'Titulo 2',
-      secondaryTitle: 'Titulo Secundario 2',
-      resourceUrl: '/assets/card_img_placeholder.svg',
-      supportingText: 'Texto de Soporte 2',
-    },
-    {
-      title: 'Titulo 3',
-      secondaryTitle: 'Titulo Secundario 3',
-      resourceUrl: '/assets/card_img_placeholder.svg',
-      supportingText: 'Texto de Soporte 3',
-    },
-    {
-      title: 'Titulo 4',
-      secondaryTitle: 'Titulo Secundario 4',
-      resourceUrl: '/assets/card_img_placeholder.svg',
-      supportingText: 'Texto de Soporte 4',
-    },
-  ];
+  cards: Array<Card> = [];
+
+  ngOnInit() {
+    this.cardsService
+      .getCards()
+      .pipe(delay(2000))
+      .subscribe((response) => {
+        this.cards = response;
+        this.loadingCards = false;
+      });
+  }
 
   onButtonClick() {
     this.nombre = 'Ana';
@@ -48,10 +38,10 @@ export class AppComponent {
   onAddCardButtonClick() {
     this.cards.push(this.newCard);
     this.newCard = {
-      title: '',
-      secondaryTitle: '',
       resourceUrl: '',
+      secondaryTitle: '',
       supportingText: '',
+      title: '',
     };
   }
 }
