@@ -1,6 +1,6 @@
 <h1>Hola, {{nombre}}!</h1>
 <!-- <button (click)="onButtonClick()">Clickeame!</button> -->
 
-<div class="container-flex" *ngFor="let card of cards">
-    <app-card [title]="card.title"></app-card>
+<div class="container-flex">
+    <app-card [card]="card" *ngFor="let card of cards"></app-card>
 </div>

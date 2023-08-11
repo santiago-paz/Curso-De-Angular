@@ -1,3 +1,9 @@
+:host::before {
+    content: 'CardComponent';
+    position: absolute;
+    background-color: white;
+}
+
 .card-container {
     width: 315px;
     border: 1px solid black;
@@ -14,7 +20,7 @@
 }
 
 .card-container .secondary-text,
-.card-container .supporting-text  {
+.card-container .supporting-text {
     font-size: 14px;
 }
 
