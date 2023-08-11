@@ -1,6 +1,13 @@
 <h1>Hola, {{nombre}}!</h1>
-<!-- <button (click)="onButtonClick()">Clickeame!</button> -->
-
 <div class="container-flex">
     <app-card [card]="card" *ngFor="let card of cards"></app-card>
 </div>
+
+<fieldset>
+    <legend>Card</legend>
+    <input type="text" [(ngModel)]="newCard.title" placeholder="Titulo">
+    <input type="text" [(ngModel)]="newCard.secondaryTitle" placeholder="Texto secundario">
+    <input type="text" [(ngModel)]="newCard.supportingText" placeholder="Texto de soporte">
+    <input type="text" [(ngModel)]="newCard.resourceUrl" placeholder="URL de la imagen">
+    <button (click)="onAddCardButtonClick()">➕ Añadir Card</button>
+</fieldset>

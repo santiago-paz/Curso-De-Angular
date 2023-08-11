@@ -8,6 +8,12 @@ import { Card } from './interfaces/card';
 })
 export class AppComponent {
   nombre = 'Santiago';
+  newCard: Card = {
+    title: '',
+    secondaryTitle: '',
+    resourceUrl: '',
+    supportingText: '',
+  };
   cards: Array<Card> = [
     {
       title: 'Titulo 1',
@@ -27,9 +33,25 @@ export class AppComponent {
       resourceUrl: '/assets/card_img_placeholder.svg',
       supportingText: 'Texto de Soporte 3',
     },
+    {
+      title: 'Titulo 4',
+      secondaryTitle: 'Titulo Secundario 4',
+      resourceUrl: '/assets/card_img_placeholder.svg',
+      supportingText: 'Texto de Soporte 4',
+    },
   ];
 
   onButtonClick() {
     this.nombre = 'Ana';
+  }
+
+  onAddCardButtonClick() {
+    this.cards.push(this.newCard);
+    this.newCard = {
+      title: '',
+      secondaryTitle: '',
+      resourceUrl: '',
+      supportingText: '',
+    };
   }
 }

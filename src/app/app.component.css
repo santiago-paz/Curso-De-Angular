@@ -14,9 +14,14 @@
 .container-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-self: center;
+    justify-content: center;
 }
 
 .container-flex app-card {
     margin: 1rem;
+}
+
+fieldset input {
+    display: block;
+    margin-bottom: 1rem;
 }

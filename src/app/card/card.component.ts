@@ -8,5 +8,5 @@ import { Card } from '../interfaces/card';
 })
 export class CardComponent {
   @Input()
-  card!: Card; 
+  card!: Card;
 }
