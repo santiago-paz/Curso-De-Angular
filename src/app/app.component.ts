@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Card } from './interfaces/card';
 import { delay } from 'rxjs';
 import { CardsService } from './services/cards.service';
+import { PlanetService } from './services/planet.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,10 @@ import { CardsService } from './services/cards.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  constructor(private cardsService: CardsService) {}
+  constructor(
+    private cardsService: CardsService,
+    private planetService: PlanetService
+  ) {}
 
   nombre = 'Santiago';
   loadingCards: boolean = true;
@@ -23,6 +27,10 @@ export class AppComponent implements OnInit {
         this.cards = response;
         this.loadingCards = false;
       });
+
+    this.planetService.getPlanet(1).subscribe((planet) => {
+      console.log(planet);
+    });
   }
 
   onAddCardButtonClick(card: Card) {

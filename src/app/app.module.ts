@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { FormsModule } from '@angular/forms';
 import { CardFormComponent } from './card-form/card-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CardFormComponent } from './card-form/card-form.component';
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
