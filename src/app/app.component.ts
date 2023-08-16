@@ -13,12 +13,6 @@ export class AppComponent implements OnInit {
 
   nombre = 'Santiago';
   loadingCards: boolean = true;
-  newCard: Card = {
-    title: '',
-    secondaryTitle: '',
-    resourceUrl: '',
-    supportingText: '',
-  };
   cards: Array<Card> = [];
 
   ngOnInit() {
@@ -35,13 +29,7 @@ export class AppComponent implements OnInit {
     this.nombre = 'Ana';
   }
 
-  onAddCardButtonClick() {
-    this.cards.push(this.newCard);
-    this.newCard = {
-      resourceUrl: '',
-      secondaryTitle: '',
-      supportingText: '',
-      title: '',
-    };
+  onAddCardButtonClick(card: Card) {
+    this.cards.push(card);
   }
 }

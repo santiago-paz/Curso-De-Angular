@@ -21,10 +21,6 @@
     margin: 1rem;
 }
 
-fieldset input {
-    display: block;
-    margin-bottom: 1rem;
-}
 
 .loading-placeholder {
     height: 50vh;
