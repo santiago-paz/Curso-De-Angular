@@ -21,5 +21,11 @@ export class CardFormComponent {
 
   onAddCardButtonClick() {
     this.addCardButtonClick.emit(this.newCard)
+    this.newCard = {
+      title: '',
+      secondaryTitle: '',
+      resourceUrl: '',
+      supportingText: '',
+    };
   }
 }

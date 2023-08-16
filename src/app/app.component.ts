@@ -25,10 +25,6 @@ export class AppComponent implements OnInit {
       });
   }
 
-  onButtonClick() {
-    this.nombre = 'Ana';
-  }
-
   onAddCardButtonClick(card: Card) {
     this.cards.push(card);
   }

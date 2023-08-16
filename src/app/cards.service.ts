@@ -11,7 +11,7 @@ export class CardsService {
   getCards(): Observable<Array<Card>> {
     return of([
       {
-        title: 'Titulo 1 Este es el primer elemento',
+        title: 'Titulo 1 ',
         secondaryTitle: 'Titulo Secundario 1',
         resourceUrl: '/assets/cat1.jpeg',
         supportingText: 'Texto de Soporte 1',
