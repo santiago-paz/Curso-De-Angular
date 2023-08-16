@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Card } from './interfaces/card';
+import { Card } from '../interfaces/card';
 
 @Injectable({
   providedIn: 'root',
@@ -27,12 +27,6 @@ export class CardsService {
         secondaryTitle: 'Titulo Secundario 3',
         resourceUrl: '/assets/cat3.jpeg',
         supportingText: 'Texto de Soporte 3',
-      },
-      {
-        title: 'Titulo 4',
-        secondaryTitle: 'Titulo Secundario 4',
-        resourceUrl: '/assets/cat4.jpeg',
-        supportingText: 'Texto de Soporte 4',
       },
     ]);
   }

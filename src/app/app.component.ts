@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from './interfaces/card';
-import { CardsService } from './cards.service';
 import { delay } from 'rxjs';
+import { CardsService } from './services/cards.service';
 
 @Component({
   selector: 'app-root',
