@@ -29,7 +29,7 @@
 }
 
 .card-container:hover img {
-    width: 150%;
+    width: 120%;
     aspect-ratio: 1.5/1;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
