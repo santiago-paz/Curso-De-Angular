@@ -21,18 +21,17 @@ export class CardsViewComponent implements OnInit {
   ngOnInit(): void {
     this.cardsService
       .getCards()
-      .pipe(delay(2000))
       .subscribe((response) => {
         this.loadingCards = false;
         this.cards = response;
-        this.swapiService.getPlanet(1).subscribe((value) => {
+        /* this.swapiService.getPlanet(1).subscribe((value) => {
           this.cards.push({
             title: value.name,
             secondaryTitle: value.created,
             supportingText: value.gravity,
             resourceUrl: 'assets/planet1.webp',
           });
-        });
+        }); */
       });
   }
 }
