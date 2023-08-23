@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CardsViewComponent } from '../views/cards-view/cards-view.component';
 import { PlanetsViewComponent } from '../views/planets-view/planets-view.component';
+import { AddCardViewComponent } from '../views/add-card-view/add-card-view.component';
 
 const routes: Routes = [
   {
@@ -13,8 +14,8 @@ const routes: Routes = [
     component: CardsViewComponent,
   },
   {
-    path: 'planets',
-    component: PlanetsViewComponent,
+    path: 'cards/add',
+    component: AddCardViewComponent,
   },
   {
     path: '**',

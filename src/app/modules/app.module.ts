@@ -1,15 +1,15 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
 import { CardFormComponent } from '../components/card-form/card-form.component';
 import { CardComponent } from '../components/card/card.component';
 import { CardsViewComponent } from '../views/cards-view/cards-view.component';
 import { PlanetsViewComponent } from '../views/planets-view/planets-view.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
+import { AddCardViewComponent } from '../views/add-card-view/add-card-view.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { MaterialModule } from './material.module';
     CardComponent,
     CardFormComponent,
     CardsViewComponent,
-
     PlanetsViewComponent,
+    AddCardViewComponent,
   ],
   imports: [
     FormsModule,
@@ -26,7 +26,7 @@ import { MaterialModule } from './material.module';
     MaterialModule,
     AppRoutingModule,
     HttpClientModule,
-  ],
+   ],
   providers: [],
   bootstrap: [AppComponent],
 })
