@@ -1,11 +1,1 @@
-<h1>Hola, {{ nombre }}!</h1>
-
-<div *ngIf="loadingCards" class="loading-placeholder">
-  <h2>Cargando cards...</h2>
-</div>
-
-<div class="container-flex">
-  <app-card [card]="card" *ngFor="let card of cards"></app-card>
-</div>
-
-<app-card-form (addCardButtonClick)="onAddCardButtonClick($event)"></app-card-form>
+<router-outlet></router-outlet>

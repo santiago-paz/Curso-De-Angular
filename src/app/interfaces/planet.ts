@@ -8,7 +8,7 @@ export interface Planet {
   terrain: string;
   surface_water: string;
   population: string;
-  residents?: string[] | null;
+  residents?: null[] | null;
   films?: string[] | null;
   created: string;
   edited: string;
