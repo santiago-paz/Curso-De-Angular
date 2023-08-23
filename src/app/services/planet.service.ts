@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class PlanetService {
-  apiUrl: string = environment.SWAPI_URL;
+  apiUrl: string = environment.swapiUrl;
   constructor(private http: HttpClient) {
 
   }

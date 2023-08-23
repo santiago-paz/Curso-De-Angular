@@ -1,32 +1,29 @@
-<fieldset>
-  <legend>CardFormComponent</legend>
-  <label for="url-recurso">URL del recurso</label>
-  <input
-    [(ngModel)]="newCard.resourceUrl"
-    type="text"
-    id="url-recurso"
-    placeholder="URL del recurso"
-  />
-  <label for="titulo">Título</label>
-  <input
-    [(ngModel)]="newCard.title"
-    type="text"
-    id="titulo"
-    placeholder="Título"
-  />
-  <label for="texto-secundario">Texto Secundario</label>
-  <input
-    type="text"
-    [(ngModel)]="newCard.secondaryTitle"
-    id="texto-secundario"
-    placeholder="Texto secundario"
-  />
-  <label for="texto-soporte">Texto de Soporte</label>
-  <input
-    type="text"
-    id="texto-soporte"
-    placeholder="Texto de Soporte"
-    [(ngModel)]="newCard.supportingText"
-  />
-  <button (click)="onAddCardButtonClick()">➕ Añadir Card</button>
-</fieldset>
+<form>
+  <mat-form-field>
+    <mat-label>URL del recurso</mat-label>
+    <input name="resourceUrl" matInput [(ngModel)]="newCard.resourceUrl" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Titulo</mat-label>
+    <input name="title" matInput [(ngModel)]="newCard.title" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Titulo Secundario</mat-label>
+    <input
+      name="secondaryTitle"
+      matInput
+      [(ngModel)]="newCard.secondaryTitle"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Texto Soporte</mat-label>
+    <input
+      name="supportingText"
+      matInput
+      [(ngModel)]="newCard.supportingText"
+    />
+  </mat-form-field>
+  <button mat-raised-button (click)="onAddCardButtonClick()">
+    ➕ Añadir Card
+  </button>
+</form>

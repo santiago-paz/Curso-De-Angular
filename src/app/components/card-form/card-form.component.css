@@ -1,5 +1,5 @@
-
-fieldset input {
-    display: block;
-    margin-bottom: 1rem;
+:host form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

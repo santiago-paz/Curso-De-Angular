@@ -8,6 +8,8 @@ import { CardFormComponent } from '../components/card-form/card-form.component';
 import { CardComponent } from '../components/card/card.component';
 import { CardsViewComponent } from '../views/cards-view/cards-view.component';
 import { PlanetsViewComponent } from '../views/planets-view/planets-view.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -15,9 +17,16 @@ import { PlanetsViewComponent } from '../views/planets-view/planets-view.compone
     CardComponent,
     CardFormComponent,
     CardsViewComponent,
+
     PlanetsViewComponent,
   ],
-  imports: [FormsModule, BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    FormsModule,
+    BrowserModule,
+    MaterialModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
