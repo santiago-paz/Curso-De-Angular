@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Card } from './interfaces/card';
+import { Card } from '../interfaces/card';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ export class CardsService {
   getCards(): Observable<Array<Card>> {
     return of([
       {
-        title: 'Titulo 1 Este es el primer elemento',
+        title: 'Titulo 1',
         secondaryTitle: 'Titulo Secundario 1',
         resourceUrl: '/assets/cat1.jpeg',
         supportingText: 'Texto de Soporte 1',

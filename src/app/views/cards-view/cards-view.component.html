@@ -1,0 +1,9 @@
+<div *ngIf="loadingCards" class="loading-placeholder">
+  <p>Cargando cards...</p>
+</div>
+
+<div class="container-flex">
+  <app-card [card]="card" *ngFor="let card of cards"></app-card>
+</div>
+
+<app-card-form></app-card-form>
