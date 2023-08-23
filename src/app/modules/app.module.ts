@@ -10,7 +10,13 @@ import { CardsViewComponent } from '../views/cards-view/cards-view.component';
 import { PlanetsViewComponent } from '../views/planets-view/planets-view.component';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, CardFormComponent, CardsViewComponent, PlanetsViewComponent],
+  declarations: [
+    AppComponent,
+    CardComponent,
+    CardFormComponent,
+    CardsViewComponent,
+    PlanetsViewComponent,
+  ],
   imports: [FormsModule, BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
