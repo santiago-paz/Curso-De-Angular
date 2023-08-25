@@ -1,8 +1,27 @@
-<div class="card-container">
-  <img [src]="card.resourceUrl" alt="Imagen del card" />
-  <div class="info-container">
-    <div class="title">{{card.title}}</div>
-    <div class="secondary-text">{{card.secondaryTitle}}</div>
-    <div class="supporting-text">{{card.supportingText}}</div>
-  </div>
-</div>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{ card.title }}</mat-card-title>
+    <mat-card-subtitle>{{ card.secondaryTitle }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    class="mat-card-image"
+    mat-card-image
+    [src]="card.resourceUrl"
+    [alt]="card.secondaryTitle"
+  />
+  <mat-card-content>
+    <p>
+      {{ card.supportingText }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-icon-button
+      color="warn"
+      aria-label="Example icon button with a heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

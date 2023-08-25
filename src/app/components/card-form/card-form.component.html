@@ -1,29 +1,22 @@
-<form>
+<h1 mat-dialog-title>Agregar Card</h1>
+<div class="mat-dialog-content">
   <mat-form-field>
     <mat-label>URL del recurso</mat-label>
-    <input name="resourceUrl" matInput [(ngModel)]="newCard.resourceUrl" />
+    <input [(ngModel)]="data.resourceUrl" matInput />
   </mat-form-field>
   <mat-form-field>
     <mat-label>Titulo</mat-label>
-    <input name="title" matInput [(ngModel)]="newCard.title" />
+    <input [(ngModel)]="data.title" matInput />
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Titulo Secundario</mat-label>
-    <input
-      name="secondaryTitle"
-      matInput
-      [(ngModel)]="newCard.secondaryTitle"
-    />
+    <mat-label>Titulo secundario</mat-label>
+    <input [(ngModel)]="data.secondaryTitle" matInput />
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Texto Soporte</mat-label>
-    <input
-      name="supportingText"
-      matInput
-      [(ngModel)]="newCard.supportingText"
-    />
+    <mat-label>Texto de soporte</mat-label>
+    <input [(ngModel)]="data.supportingText" matInput />
   </mat-form-field>
-  <button mat-raised-button (click)="onAddCardButtonClick()">
-    ➕ Añadir Card
+  <button [mat-dialog-close]="data" mat-raised-button color="primary">
+    Añadir
   </button>
-</form>
+</div>

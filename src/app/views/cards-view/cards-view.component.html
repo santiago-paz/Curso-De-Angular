@@ -2,8 +2,8 @@
   <p>Cargando cards...</p>
 </div>
 
+<button mat-raised-button (click)="onAddCardButtonClick()" color="primary">+ Agregar Card</button>
+
 <div class="container-flex">
   <app-card [card]="card" *ngFor="let card of cards"></app-card>
 </div>
-
-<a routerLink="add">Añadir Card</a>

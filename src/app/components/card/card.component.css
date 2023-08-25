@@ -1,50 +1,16 @@
-:host::before {
-    content: 'CardComponent';
-    position: absolute;
-    background-color: white;
-    padding: 0 .5rem;
-    margin: -.5em .5rem;
+.card {
+    width: 400px;
 }
 
-.card-container {
-    overflow: hidden;
-    transition: 300ms;
-    width: 315px;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
-}
-
-.card-container:hover {
-    box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-}
-
-.card-container img {
-    width: 100%;
+.mat-card-image {
+    height: 14rem;
     object-fit: cover;
-    aspect-ratio: 1.5/1;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    max-height: 210px;
-    transition: 300ms;
 }
 
-.card-container:hover img {
-    width: 120%;
-    aspect-ratio: 1.5/1;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+mat-card-header {
+    margin-bottom: 16px;
 }
 
-.card-container .title {
-    font-size: 20px;
-    margin-bottom: .5rem;
-}
-
-.card-container .secondary-text,
-.card-container .supporting-text {
-    font-size: 14px;
-}
-
-.card-container .info-container {
-    padding: 10px;
+mat-card-content p {
+    margin-top: 16px;
 }

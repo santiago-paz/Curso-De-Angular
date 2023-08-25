@@ -1,23 +1,15 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Card } from '../../interfaces/card';
 
 @Component({
   selector: 'app-card-form',
   templateUrl: './card-form.component.html',
-  styleUrls: ['./card-form.component.css']
+  styleUrls: ['./card-form.component.css'],
 })
 export class CardFormComponent {
-  @Output()
-  private addCardButtonClick: EventEmitter<Card> = new EventEmitter()
-
-  newCard: Card = {
-    title: '',
-    secondaryTitle: '',
-    resourceUrl: '',
-    supportingText: '',
-  };
-
-  onAddCardButtonClick() {
-    this.addCardButtonClick.emit(this.newCard)
-  }
+  constructor(
+    public dialogRef: MatDialogRef<CardFormComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Card
+  ) {}
 }

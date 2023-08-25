@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CardFormComponent } from 'src/app/components/card-form/card-form.component';
 import { Card } from '../../interfaces/card';
 import { CardsService } from '../../services/cards.service';
-import { SwapiService } from '../../services/swapi.service';
-import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-cards-view',
@@ -10,28 +10,30 @@ import { delay } from 'rxjs';
   styleUrls: ['./cards-view.component.css'],
 })
 export class CardsViewComponent implements OnInit {
-  constructor(
-    private cardsService: CardsService,
-    private swapiService: SwapiService
-  ) {}
+  constructor(private cardsService: CardsService, public dialog: MatDialog) {}
 
   loadingCards: boolean = true;
   cards: Array<Card> = [];
+  newCard: Card = {
+    title: '',
+    secondaryTitle: '',
+    resourceUrl: '',
+    supportingText: '',
+  };
 
   ngOnInit(): void {
-    this.cardsService
-      .getCards()
-      .subscribe((response) => {
-        this.loadingCards = false;
-        this.cards = response;
-        /* this.swapiService.getPlanet(1).subscribe((value) => {
-          this.cards.push({
-            title: value.name,
-            secondaryTitle: value.created,
-            supportingText: value.gravity,
-            resourceUrl: 'assets/planet1.webp',
-          });
-        }); */
-      });
+    this.cardsService.getCards().subscribe((response) => {
+      this.loadingCards = false;
+      this.cards = response;
+    });
+  }
+
+  onAddCardButtonClick() {
+    const dialogRef = this.dialog.open(CardFormComponent, {
+      data: this.newCard,
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.cards.unshift(result)
+    });
   }
 }

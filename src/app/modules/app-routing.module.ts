@@ -18,6 +18,10 @@ const routes: Routes = [
     component: AddCardViewComponent,
   },
   {
+    path: 'planets',
+    component: PlanetsViewComponent,
+  },
+  {
     path: '**',
     redirectTo: 'cards',
   },

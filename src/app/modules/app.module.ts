@@ -23,10 +23,10 @@ import { AddCardViewComponent } from '../views/add-card-view/add-card-view.compo
   imports: [
     FormsModule,
     BrowserModule,
-    MaterialModule,
     AppRoutingModule,
     HttpClientModule,
-   ],
+    MaterialModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

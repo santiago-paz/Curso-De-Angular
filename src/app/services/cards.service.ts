@@ -28,6 +28,12 @@ export class CardsService {
         resourceUrl: '/assets/cat3.jpeg',
         supportingText: 'Texto de Soporte 3',
       },
+      {
+        title: 'Titulo 4 Tercer elemento',
+        secondaryTitle: 'Titulo Secundario 3',
+        resourceUrl: '/assets/cat4.jpeg',
+        supportingText: 'Texto de Soporte 3',
+      },
     ]);
   }
 }
