@@ -10,6 +10,7 @@ import { PlanetsViewComponent } from '../views/planets-view/planets-view.compone
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { AddCardViewComponent } from '../views/add-card-view/add-card-view.component';
+import { AdminModule } from './admin.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AddCardViewComponent } from '../views/add-card-view/add-card-view.compo
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
